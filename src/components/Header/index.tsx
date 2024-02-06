@@ -8,7 +8,9 @@ const Header = () => {
   return (
     <S.HeaderBar>
       <div>
-        <img src={logo} alt="Eplay" />
+        <Link to="/">
+          <img src={logo} alt="Eplay" />
+        </Link>
         <nav>
           <S.Links>
             <S.LinkItem>
