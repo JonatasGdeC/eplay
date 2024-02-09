@@ -3,6 +3,8 @@ import Gallery from '../../components/Gallery'
 import Hero from '../../components/Hero'
 import Section from '../../components/Section'
 
+import residentEvil from '../../assets/images/resident.png'
+
 const Products = () => {
   return (
     <>
@@ -33,9 +35,7 @@ const Products = () => {
           jogo.
         </p>
       </Section>
-      <Section title="Galeria" background="black">
-        <Gallery />
-      </Section>
+      <Gallery name="Jogo teste" defaultCover={residentEvil} />
     </>
   )
 }
