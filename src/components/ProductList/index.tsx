@@ -6,6 +6,7 @@ export type Props = {
   title: string
   background: 'gray' | 'black'
   games: Game[]
+  id?: string
 }
 
 export const formataPreco = (preco = 0) => {
@@ -15,7 +16,7 @@ export const formataPreco = (preco = 0) => {
   }).format(preco)
 }
 
-const ProductsList = ({ background, title, games }: Props) => {
+const ProductsList = ({ background, title, games, id }: Props) => {
   const getGameTags = (game: Game) => {
     const tags = []
 
@@ -34,7 +35,7 @@ const ProductsList = ({ background, title, games }: Props) => {
     return tags
   }
   return (
-    <S.Container background={background}>
+    <S.Container background={background} id={id}>
       <div className="container">
         <S.Title>{title}</S.Title>
         <S.List>
