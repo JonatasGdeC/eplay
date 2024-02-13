@@ -1,18 +1,14 @@
 import * as S from './styles'
 import Tag from '../Tag'
 import Button from '../Button'
-import { useEffect, useState } from 'react'
-import { Game } from '../../pages/Home'
+// import { useEffect, useState } from 'react'
+// import { Game } from '../../pages/Home'
 import { formataPreco } from '../ProductList'
 
-const Banner = () => {
-  const [game, setGame] = useState<Game>()
+import { useGetFeatureGameQuery } from '../../services/api'
 
-  useEffect(() => {
-    fetch('https://fake-api-tau.vercel.app/api/eplay/destaque')
-      .then((res) => res.json())
-      .then((res) => setGame(res))
-  }, [])
+const Banner = () => {
+  const { data: game } = useGetFeatureGameQuery()
 
   if (!game) {
     return <h3>Carregando...</h3>

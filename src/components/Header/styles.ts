@@ -29,7 +29,7 @@ export const LinkItem = styled.li`
   margin-right: 16px;
 `
 
-export const LinkCard = styled.a`
+export const CardButton = styled.a`
   display: flex;
   gap: 16px;
 `
