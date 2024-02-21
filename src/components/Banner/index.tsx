@@ -1,11 +1,10 @@
-import * as S from './styles'
 import Tag from '../Tag'
 import Button from '../Button'
-// import { useEffect, useState } from 'react'
-// import { Game } from '../../pages/Home'
-import { formataPreco } from '../ProductList'
 
+import { formataPreco } from '../ProductList'
 import { useGetFeatureGameQuery } from '../../services/api'
+
+import * as S from './styles'
 
 const Banner = () => {
   const { data: game } = useGetFeatureGameQuery()

@@ -1,14 +1,16 @@
 import { useState } from 'react'
+import * as Yup from 'yup'
+import { useFormik } from 'formik'
 
-import * as S from './styles'
+import { usePurchaseMutation } from '../../services/api'
+
 import Card from '../../components/Card'
 import Button from '../../components/Button'
 
 import boleto from '../../assets/images/boleto.png'
 import cartao from '../../assets/images/cartao.png'
-import { useFormik } from 'formik'
-import * as Yup from 'yup'
-import { usePurchaseMutation } from '../../services/api'
+
+import * as S from './styles'
 
 const Cheackout = () => {
   const [payWithCard, setPayWithCard] = useState(false)
