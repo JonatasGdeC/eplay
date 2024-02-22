@@ -7,8 +7,8 @@ import { usePurchaseMutation } from '../../services/api'
 import Card from '../../components/Card'
 import Button from '../../components/Button'
 
-import boleto from '../../assets/images/boleto.png'
-import cartao from '../../assets/images/cartao.png'
+import barCode from '../../assets/images/boleto.png'
+import creditCard from '../../assets/images/cartao.png'
 
 import * as S from './styles'
 
@@ -250,14 +250,14 @@ const Cheackout = () => {
                 isActive={!payWithCard}
                 onClick={() => setPayWithCard(false)}
               >
-                <img src={boleto} alt="Boleto" />
+                <img src={barCode} alt="Boleto" />
                 Boleto Bancário
               </S.TabButton>
               <S.TabButton
                 isActive={payWithCard}
                 onClick={() => setPayWithCard(true)}
               >
-                <img src={cartao} alt="Cartão" />
+                <img src={creditCard} alt="Cartão" />
                 Cartão de Crédito
               </S.TabButton>
               <div className="margin-top">

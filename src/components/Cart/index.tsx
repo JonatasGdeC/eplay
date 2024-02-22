@@ -5,9 +5,9 @@ import Button from '../Button'
 import Tag from '../Tag'
 
 import { close, remove } from '../../store/reducers/cart'
-import { formataPreco } from '../ProductList'
 
 import * as S from './styles'
+import { parseToBrl } from '../../utils'
 
 const Cart = () => {
   const { isOpen, items } = useSelector((state: RootReducer) => state.cart)
@@ -39,7 +39,7 @@ const Cart = () => {
                 <h3>{item.name}</h3>
                 <Tag>{item.details.category}</Tag>
                 <Tag>{item.details.system}</Tag>
-                <span>{formataPreco(item.prices.current)}</span>
+                <span>{parseToBrl(item.prices.current)}</span>
               </div>
               <button type="button" onClick={() => removeItem(item.id)} />
             </S.CartItem>
@@ -47,7 +47,7 @@ const Cart = () => {
         </ul>
         <S.Quantity>{items.length} jogo(s) no carrinho</S.Quantity>
         <S.Prices>
-          Total de {formataPreco(getTotalPrice())}{' '}
+          Total de {parseToBrl(getTotalPrice())}{' '}
           <span>Em até 6x sem juros</span>
         </S.Prices>
         <Button title="Clque aqui para continuar com a compra" type="button">

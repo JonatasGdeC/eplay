@@ -5,7 +5,7 @@ import { GalleryItem } from '../../pages/Home'
 
 import play from '../../assets/images/play.png'
 import zoom from '../../assets/images/zoom.png'
-import close from '../../assets/images/fechar.png'
+import closeIcon from '../../assets/images/fechar.png'
 
 import * as S from './styles'
 
@@ -73,11 +73,11 @@ const Gallery = ({ defaultCover, name, items }: Props) => {
           ))}
         </S.Items>
       </Section>
-      <S.Modal className={modal.isVisible ? 'visivel' : ''}>
+      <S.Modal className={modal.isVisible ? 'is-visible' : ''}>
         <S.ModalContant className="container">
           <header>
             <h4>{name}</h4>
-            <img src={close} alt="Fechar" onClick={() => closeModal()} />
+            <img src={closeIcon} alt="Fechar" onClick={closeModal} />
           </header>
           {modal.type === 'image' ? (
             <img src={modal.url} alt="" />
@@ -85,7 +85,7 @@ const Gallery = ({ defaultCover, name, items }: Props) => {
             <iframe frameBorder={0} src={modal.url} />
           )}
         </S.ModalContant>
-        <div className="overlay" onClick={() => closeModal()}></div>
+        <div className="overlay" onClick={closeModal}></div>
       </S.Modal>
     </>
   )
