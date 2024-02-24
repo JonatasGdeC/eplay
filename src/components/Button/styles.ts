@@ -15,6 +15,11 @@ export const ButtonContainer = styled.button<Props>`
   padding: 8px 16px;
   border-radius: 8px;
   cursor: pointer;
+  transition: all ease 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
 `
 export const ButtonLink = styled(Link)`
   background-color: transparent;
@@ -25,4 +30,9 @@ export const ButtonLink = styled(Link)`
   padding: 8px 16px;
   text-decoration: none;
   border-radius: 8px;
+  transition: all ease 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
 `

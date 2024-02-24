@@ -12,6 +12,7 @@ export const Card = styled(Link)`
   color: ${colors.white};
   display: block;
   height: 100%;
+  transition: all ease 0.3s;
 
   img {
     display: block;
@@ -22,6 +23,11 @@ export const Card = styled(Link)`
 
   ${TagContainer} {
     margin-right: 8px;
+  }
+
+  &:hover {
+    scale: 1.03;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
   }
 `
 export const Title = styled.h3`

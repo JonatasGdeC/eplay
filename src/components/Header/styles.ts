@@ -22,6 +22,11 @@ export const HeaderBar = styled.header`
     color: ${colors.white};
     text-decoration: none;
     font-weight: bold;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   h1 {
