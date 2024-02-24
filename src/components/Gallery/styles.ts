@@ -79,6 +79,8 @@ export const ModalContant = styled.div`
     }
 
     img {
+      height: 16px;
+      width: 16px;
       cursor: pointer;
     }
   }
